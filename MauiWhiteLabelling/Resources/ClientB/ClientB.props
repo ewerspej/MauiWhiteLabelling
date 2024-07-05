@@ -1,7 +1,9 @@
 <Project>
 	<PropertyGroup>
+		<!-- Assembly Name -->
+		<ApplicationAssemblyName>CrazyAwesomeApp</ApplicationAssemblyName>
 		<!-- Display name -->
-		<ApplicationTitle>CrazyAwesomeApp</ApplicationTitle>
+		<ApplicationTitle>Crazy Awesome App</ApplicationTitle>
 		<!-- App Identifier -->
 		<ApplicationId>com.ClientB.CrazyAwesomeApp</ApplicationId>
 	</PropertyGroup>

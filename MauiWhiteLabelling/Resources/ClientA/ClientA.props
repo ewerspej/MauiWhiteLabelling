@@ -1,7 +1,9 @@
 <Project>
 	<PropertyGroup>
+		<!-- Assembly Name -->
+		<ApplicationAssemblyName>SuperDuperApp</ApplicationAssemblyName>
 		<!-- Display name -->
-		<ApplicationTitle>SuperDuperApp</ApplicationTitle>
+		<ApplicationTitle>Super Duper App</ApplicationTitle>
 		<!-- App Identifier -->
 		<ApplicationId>com.ClientA.SuperDuperApp</ApplicationId>
 	</PropertyGroup>

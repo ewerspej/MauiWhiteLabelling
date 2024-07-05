@@ -34,6 +34,10 @@
   <Import Condition="$(Configuration.EndsWith('ClientA'))" Project="Resources\ClientA\ClientA.props" />
   <Import Condition="$(Configuration.EndsWith('ClientB'))" Project="Resources\ClientB\ClientB.props" />
 
+  <PropertyGroup>
+    <AssemblyName>$(ApplicationAssemblyName)</AssemblyName>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.MVVM" Version="8.2.2" />
     <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />

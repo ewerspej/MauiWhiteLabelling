@@ -1,5 +1,7 @@
 <Project>
 	<PropertyGroup>
+		<!-- Assembly Name -->
+		<ApplicationAssemblyName>MauiWhiteLabelling</ApplicationAssemblyName>
 		<!-- Display name -->
 		<ApplicationTitle>MauiWhiteLabelling</ApplicationTitle>
 		<!-- App Identifier -->
