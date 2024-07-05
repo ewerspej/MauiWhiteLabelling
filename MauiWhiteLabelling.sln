@@ -8,15 +8,31 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug-ClientA|Any CPU = Debug-ClientA|Any CPU
+		Debug-ClientB|Any CPU = Debug-ClientB|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Release-ClientA|Any CPU = Release-ClientA|Any CPU
+		Release-ClientB|Any CPU = Release-ClientB|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A162A7D4-68E2-4C53-A0CF-ECD23D229152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A162A7D4-68E2-4C53-A0CF-ECD23D229152}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A162A7D4-68E2-4C53-A0CF-ECD23D229152}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A162A7D4-68E2-4C53-A0CF-ECD23D229152}.Debug-ClientA|Any CPU.ActiveCfg = Debug-ClientA|Any CPU
+		{A162A7D4-68E2-4C53-A0CF-ECD23D229152}.Debug-ClientA|Any CPU.Build.0 = Debug-ClientA|Any CPU
+		{A162A7D4-68E2-4C53-A0CF-ECD23D229152}.Debug-ClientA|Any CPU.Deploy.0 = Debug-ClientA|Any CPU
+		{A162A7D4-68E2-4C53-A0CF-ECD23D229152}.Debug-ClientB|Any CPU.ActiveCfg = Debug-ClientB|Any CPU
+		{A162A7D4-68E2-4C53-A0CF-ECD23D229152}.Debug-ClientB|Any CPU.Build.0 = Debug-ClientB|Any CPU
+		{A162A7D4-68E2-4C53-A0CF-ECD23D229152}.Debug-ClientB|Any CPU.Deploy.0 = Debug-ClientB|Any CPU
 		{A162A7D4-68E2-4C53-A0CF-ECD23D229152}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A162A7D4-68E2-4C53-A0CF-ECD23D229152}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A162A7D4-68E2-4C53-A0CF-ECD23D229152}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A162A7D4-68E2-4C53-A0CF-ECD23D229152}.Release-ClientA|Any CPU.ActiveCfg = Release-ClientA|Any CPU
+		{A162A7D4-68E2-4C53-A0CF-ECD23D229152}.Release-ClientA|Any CPU.Build.0 = Release-ClientA|Any CPU
+		{A162A7D4-68E2-4C53-A0CF-ECD23D229152}.Release-ClientA|Any CPU.Deploy.0 = Release-ClientA|Any CPU
+		{A162A7D4-68E2-4C53-A0CF-ECD23D229152}.Release-ClientB|Any CPU.ActiveCfg = Release-ClientB|Any CPU
+		{A162A7D4-68E2-4C53-A0CF-ECD23D229152}.Release-ClientB|Any CPU.Build.0 = Release-ClientB|Any CPU
+		{A162A7D4-68E2-4C53-A0CF-ECD23D229152}.Release-ClientB|Any CPU.Deploy.0 = Release-ClientB|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

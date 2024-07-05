@@ -11,12 +11,6 @@
     <Nullable>enable</Nullable>
     <MauiVersion>8.0.14</MauiVersion>
 
-    <!-- Display name -->
-    <ApplicationTitle>MauiWhiteLabelling</ApplicationTitle>
-
-    <!-- App Identifier -->
-    <ApplicationId>com.companyname.MauiWhiteLabelling</ApplicationId>
-
     <!-- Versions -->
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
     <ApplicationVersion>1</ApplicationVersion>
@@ -26,6 +20,7 @@
     <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
     <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
     <TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+    <Configurations>Debug;Release;Debug-ClientA;Debug-ClientB;Release-ClientA;Release-ClientB</Configurations>
   </PropertyGroup>
 
   <!-- Note for MacCatalyst:
@@ -35,23 +30,9 @@
 		either BOTH runtimes must be indicated or ONLY macatalyst-x64. -->
   <!-- For example: <RuntimeIdentifiers>maccatalyst-x64;maccatalyst-arm64</RuntimeIdentifiers> -->
 
-  <ItemGroup>
-    <!-- App Icon -->
-    <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
-
-    <!-- Splash Screen -->
-    <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
-
-    <!-- Images -->
-    <MauiImage Include="Resources\Images\*" />
-    <MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
-
-    <!-- Custom Fonts -->
-    <MauiFont Include="Resources\Fonts\*" />
-
-    <!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
-    <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
-  </ItemGroup>
+  <Import Condition="'$(Configuration)' == 'Debug' OR '$(Configuration)' == 'Release'" Project="Resources\default.props" />
+  <Import Condition="$(Configuration.EndsWith('ClientA'))" Project="Resources\ClientA\ClientA.props" />
+  <Import Condition="$(Configuration.EndsWith('ClientB'))" Project="Resources\ClientB\ClientB.props" />
 
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.MVVM" Version="8.2.2" />
@@ -59,10 +40,6 @@
     <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
     <PackageReference Include="Microsoft.Maui.Essentials" Version="$(MauiVersion)" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
-  </ItemGroup>
-
-  <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
-    <BundleResource Include="Platforms\iOS\PrivacyInfo.xcprivacy" LogicalName="PrivacyInfo.xcprivacy" />
   </ItemGroup>
 
   <PropertyGroup Label="MauiAppAccelerator">
