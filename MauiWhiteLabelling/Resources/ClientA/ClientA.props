@@ -11,7 +11,7 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\ClientA\AppIcon\appicon.svg" ForegroundFile="Resources\ClientA\AppIcon\appiconfg.svg" Color="#123456"/>
+		<MauiIcon Include="Resources\ClientA\AppIcon\appicon.svg" ForegroundFile="Resources\ClientA\AppIcon\appiconfg.svg" Color="#123456" ForegroundScale="0.65"/>
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\ClientA\Splash\splash.svg" Color="#123456" BaseSize="128,128"/>
 		<!-- Images -->
