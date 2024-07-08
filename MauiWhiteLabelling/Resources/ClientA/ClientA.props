@@ -1,4 +1,4 @@
-<Project>
+<Project InitialTargets="CopyResourceFiles">
 	<PropertyGroup>
 		<!-- Assembly Name -->
 		<ApplicationAssemblyName>SuperDuperApp</ApplicationAssemblyName>
@@ -6,10 +6,12 @@
 		<ApplicationTitle>Super Duper App</ApplicationTitle>
 		<!-- App Identifier -->
 		<ApplicationId>com.ClientA.SuperDuperApp</ApplicationId>
+		<!-- Compilation Constants -->
+    <DefineConstants>$(DefineConstants);ClientA</DefineConstants>
 	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\ClientA\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#123456"/>
+		<MauiIcon Include="Resources\ClientA\AppIcon\appicon.svg" ForegroundFile="Resources\ClientA\AppIcon\appiconfg.svg" Color="#123456"/>
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\ClientA\Splash\splash.svg" Color="#123456" BaseSize="128,128"/>
 		<!-- Images -->
@@ -21,4 +23,7 @@
 		<!-- Privacy Manifest for iOS -->
 		<BundleResource Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'" Include="Platforms\iOS\PrivacyInfo.xcprivacy" LogicalName="PrivacyInfo.xcprivacy"/>
 	</ItemGroup>
+  <Target Name="CopyResourceFiles">
+    <Copy SourceFiles="Resources\ClientA\Styles\Styles.xaml;Resources\ClientA\Styles\Colors.xaml" DestinationFolder="Resources\Styles" />
+  </Target>
 </Project>

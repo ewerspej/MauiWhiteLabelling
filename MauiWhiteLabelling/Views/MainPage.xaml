@@ -3,6 +3,7 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 			 xmlns:vm="clr-namespace:MauiWhiteLabelling.ViewModels"
 			 x:Class="MauiWhiteLabelling.Views.MainPage"
-			 x:DataType="vm:MainViewModel">
+			 x:DataType="vm:MainViewModel"
+       BackgroundColor="{StaticResource Primary}">
 
 </ContentPage>

@@ -30,7 +30,7 @@
 		either BOTH runtimes must be indicated or ONLY macatalyst-x64. -->
   <!-- For example: <RuntimeIdentifiers>maccatalyst-x64;maccatalyst-arm64</RuntimeIdentifiers> -->
 
-  <Import Condition="'$(Configuration)' == 'Debug' OR '$(Configuration)' == 'Release'" Project="Resources\default.props" />
+  <Import Condition="'$(Configuration)' == 'Debug' OR '$(Configuration)' == 'Release'" Project="Resources\Default\default.props" />
   <Import Condition="$(Configuration.EndsWith('ClientA'))" Project="Resources\ClientA\ClientA.props" />
   <Import Condition="$(Configuration.EndsWith('ClientB'))" Project="Resources\ClientB\ClientB.props" />
 
