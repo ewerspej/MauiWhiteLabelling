@@ -1,28 +1,28 @@
 <Project InitialTargets="CopyResourceFiles">
-	<PropertyGroup>
-		<!-- Assembly Name -->
-		<ApplicationAssemblyName>SuperDuperApp</ApplicationAssemblyName>
-		<!-- Display name -->
-		<ApplicationTitle>Super Duper App</ApplicationTitle>
-		<!-- App Identifier -->
-		<ApplicationId>com.ClientA.SuperDuperApp</ApplicationId>
-		<!-- Compilation Constants -->
+  <PropertyGroup>
+    <!-- Assembly Name -->
+    <ApplicationAssemblyName>SuperDuperApp</ApplicationAssemblyName>
+    <!-- Display name -->
+    <ApplicationTitle>Super Duper App</ApplicationTitle>
+    <!-- App Identifier -->
+    <ApplicationId>com.ClientA.SuperDuperApp</ApplicationId>
+    <!-- Compilation Constants -->
     <DefineConstants>$(DefineConstants);ClientA</DefineConstants>
-	</PropertyGroup>
-	<ItemGroup>
-		<!-- App Icon -->
-		<MauiIcon Include="Resources\ClientA\AppIcon\appicon.svg" ForegroundFile="Resources\ClientA\AppIcon\appiconfg.svg" Color="#123456" ForegroundScale="0.65"/>
-		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\ClientA\Splash\splash.svg" Color="#123456" BaseSize="128,128"/>
-		<!-- Images -->
-		<MauiImage Include="Resources\ClientA\Images\*"/>
-		<!-- Custom Fonts -->
-		<MauiFont Include="Resources\ClientA\Fonts\*"/>
-		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
-		<MauiAsset Include="Resources\ClientA\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)"/>
-		<!-- Privacy Manifest for iOS -->
-		<BundleResource Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'" Include="Platforms\iOS\PrivacyInfo.xcprivacy" LogicalName="PrivacyInfo.xcprivacy"/>
-	</ItemGroup>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- App Icon -->
+    <MauiIcon Include="Resources\ClientA\AppIcon\appicon.svg" ForegroundFile="Resources\ClientA\AppIcon\appiconfg.svg" Color="#123456" ForegroundScale="0.65"/>
+    <!-- Splash Screen -->
+    <MauiSplashScreen Include="Resources\ClientA\Splash\splash.svg" Color="#123456" BaseSize="128,128"/>
+    <!-- Images -->
+    <MauiImage Include="Resources\ClientA\Images\*"/>
+    <!-- Custom Fonts -->
+    <MauiFont Include="Resources\ClientA\Fonts\*"/>
+    <!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+    <MauiAsset Include="Resources\ClientA\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)"/>
+    <!-- Privacy Manifest for iOS -->
+    <BundleResource Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'" Include="Platforms\iOS\PrivacyInfo.xcprivacy" LogicalName="PrivacyInfo.xcprivacy"/>
+  </ItemGroup>
   <Target Name="CopyResourceFiles">
     <Copy SourceFiles="Resources\ClientA\Styles\Styles.xaml;Resources\ClientA\Styles\Colors.xaml" DestinationFolder="Resources\Styles" />
   </Target>

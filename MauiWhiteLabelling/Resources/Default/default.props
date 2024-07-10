@@ -1,26 +1,28 @@
 <Project InitialTargets="CopyResourceFiles">
-	<PropertyGroup>
-		<!-- Assembly Name -->
-		<ApplicationAssemblyName>MauiWhiteLabelling</ApplicationAssemblyName>
-		<!-- Display name -->
-		<ApplicationTitle>MauiWhiteLabelling</ApplicationTitle>
-		<!-- App Identifier -->
-		<ApplicationId>com.companyname.MauiWhiteLabelling</ApplicationId>
-	</PropertyGroup>
-	<ItemGroup>
-		<!-- App Icon -->
-		<MauiIcon Include="Resources\Default\AppIcon\appicon.svg" ForegroundFile="Resources\Default\AppIcon\appiconfg.svg" Color="#512BD4"/>
-		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Default\Splash\splash.svg" Color="#512BD4" BaseSize="128,128"/>
-		<!-- Images -->
-		<MauiImage Include="Resources\Default\Images\*"/>
-		<!-- Custom Fonts -->
-		<MauiFont Include="Resources\Default\Fonts\*"/>
-		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
-		<MauiAsset Include="Resources\Default\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)"/>
-		<!-- Privacy Manifest for iOS -->
-		<BundleResource Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'" Include="Platforms\iOS\PrivacyInfo.xcprivacy" LogicalName="PrivacyInfo.xcprivacy"/>
-	</ItemGroup>
+  <PropertyGroup>
+    <!-- Assembly Name -->
+    <ApplicationAssemblyName>MauiWhiteLabelling</ApplicationAssemblyName>
+    <!-- Display name -->
+    <ApplicationTitle>MauiWhiteLabelling</ApplicationTitle>
+    <!-- App Identifier -->
+    <ApplicationId>com.companyname.MauiWhiteLabelling</ApplicationId>
+    <!-- Compilation Constants -->
+    <DefineConstants>$(DefineConstants);DefaultApp</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- App Icon -->
+    <MauiIcon Include="Resources\Default\AppIcon\appicon.svg" ForegroundFile="Resources\Default\AppIcon\appiconfg.svg" Color="#512BD4"/>
+    <!-- Splash Screen -->
+    <MauiSplashScreen Include="Resources\Default\Splash\splash.svg" Color="#512BD4" BaseSize="128,128"/>
+    <!-- Images -->
+    <MauiImage Include="Resources\Default\Images\*"/>
+    <!-- Custom Fonts -->
+    <MauiFont Include="Resources\Default\Fonts\*"/>
+    <!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+    <MauiAsset Include="Resources\Default\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)"/>
+    <!-- Privacy Manifest for iOS -->
+    <BundleResource Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'" Include="Platforms\iOS\PrivacyInfo.xcprivacy" LogicalName="PrivacyInfo.xcprivacy"/>
+  </ItemGroup>
   <Target Name="CopyResourceFiles">
     <Copy SourceFiles="Resources\Default\Styles\Styles.xaml;Resources\Default\Styles\Colors.xaml" DestinationFolder="Resources\Styles" />
   </Target>
