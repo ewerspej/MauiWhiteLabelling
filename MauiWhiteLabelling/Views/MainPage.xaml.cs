@@ -9,11 +9,11 @@ public partial class MainPage : ContentPage
     
     private async void Button_OnClicked(object? sender, EventArgs e)
     {
-#if DefaultApp
+#if DEFAULT_APP
         await DisplayAlert("Default App", "This is the default app", "OK");
-#elif ClientA
+#elif CLIENT_A
         await DisplayAlert("Client A", "This is client A", "OK");
-#elif ClientB
+#elif CLIENT_B
         await DisplayAlert("Client B", "This is client B", "OK");
 #endif
     }

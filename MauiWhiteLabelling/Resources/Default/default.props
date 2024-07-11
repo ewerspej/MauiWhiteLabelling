@@ -7,7 +7,7 @@
     <!-- App Identifier -->
     <ApplicationId>com.companyname.MauiWhiteLabelling</ApplicationId>
     <!-- Compilation Constants -->
-    <DefineConstants>$(DefineConstants);DefaultApp</DefineConstants>
+    <DefineConstants>$(DefineConstants);DEFAULT_APP</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <!-- App Icon -->

@@ -9,14 +9,14 @@
 
   <Grid>
     <VerticalStackLayout
-      Margin="20"
-      Spacing="20"
+      Padding="20,40"
+      Spacing="40"
       VerticalOptions="Start"
       HorizontalOptions="Center">
       <Image
         Source="logo.png"
-        WidthRequest="100"
-        HeightRequest="100"
+        WidthRequest="80"
+        HeightRequest="80"
         HorizontalOptions="Center"
         VerticalOptions="Center" />
       <Label

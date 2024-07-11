@@ -7,7 +7,7 @@
     <!-- App Identifier -->
     <ApplicationId>com.ClientB.CrazyAwesomeApp</ApplicationId>
     <!-- Compilation Constants -->
-    <DefineConstants>$(DefineConstants);ClientB</DefineConstants>
+    <DefineConstants>$(DefineConstants);CLIENT_B</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <!-- App Icon -->

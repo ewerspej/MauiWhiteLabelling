@@ -7,7 +7,7 @@
     <!-- App Identifier -->
     <ApplicationId>com.ClientA.SuperDuperApp</ApplicationId>
     <!-- Compilation Constants -->
-    <DefineConstants>$(DefineConstants);ClientA</DefineConstants>
+    <DefineConstants>$(DefineConstants);CLIENT_A</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <!-- App Icon -->
