@@ -161,8 +161,8 @@
 	</Style>
 
 	<Style TargetType="Label">
-		<Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
-		<Setter Property="BackgroundColor" Value="Transparent" />
+    <Setter Property="TextColor" Value="{StaticResource White}" />
+    <Setter Property="BackgroundColor" Value="Transparent" />
 		<Setter Property="FontFamily" Value="FontRegular" />
 		<Setter Property="FontSize" Value="14" />
 		<Setter Property="VisualStateManager.VisualStateGroups">

@@ -1,6 +1,5 @@
 ﻿global using CommunityToolkit.Mvvm.ComponentModel;
 global using CommunityToolkit.Mvvm.Input;
-global using MauiWhiteLabelling.ViewModels;
 global using MauiWhiteLabelling.Views;
 global using System.Collections.ObjectModel;
 global using System.ComponentModel;

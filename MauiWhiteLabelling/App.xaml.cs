@@ -1,4 +1,6 @@
-﻿namespace MauiWhiteLabelling;
+﻿using CommunityToolkit.Maui;
+
+namespace MauiWhiteLabelling;
 
 public partial class App : Application
 {
@@ -10,4 +12,14 @@ public partial class App : Application
 
 		MainPage = new AppShell();
 	}
+
+    protected override void OnStart()
+    {
+        if (!Resources.TryGetValue("Primary", out var color) || color is not Color primaryColor)
+        {
+            return;
+        }
+        
+        CommunityToolkit.Maui.Core.Platform.StatusBar.SetColor(primaryColor);
+    }
 }

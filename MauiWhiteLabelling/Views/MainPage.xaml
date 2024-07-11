@@ -3,31 +3,30 @@
   x:Class="MauiWhiteLabelling.Views.MainPage"
   xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-  xmlns:vm="clr-namespace:MauiWhiteLabelling.ViewModels"
-  x:DataType="vm:MainViewModel"
   BackgroundColor="{StaticResource Primary}"
   Shell.BackgroundColor="{StaticResource Primary}"
   Shell.NavBarIsVisible="False">
 
-  <Grid
-    RowDefinitions="100,auto"
-    RowSpacing="20"
-    HorizontalOptions="Center"
-    VerticalOptions="Center">
-    <Image
-      Grid.Row="0"
-      Source="logo.png"
-      WidthRequest="100"
-      HeightRequest="100"
-      HorizontalOptions="Center"
-      VerticalOptions="Center" />
-    <Label
-      Grid.Row="1"
-      Text="Welcome!"
-      FontFamily="FontSemibold"
-      FontSize="36"
-      HorizontalOptions="Center"
-      VerticalOptions="Center" />
+  <Grid>
+    <VerticalStackLayout
+      Margin="20"
+      Spacing="20"
+      VerticalOptions="Start"
+      HorizontalOptions="Center">
+      <Image
+        Source="logo.png"
+        WidthRequest="100"
+        HeightRequest="100"
+        HorizontalOptions="Center"
+        VerticalOptions="Center" />
+      <Label
+        Text="Welcome!"
+        FontFamily="FontSemibold"
+        FontSize="36"
+        HorizontalOptions="Center"
+        VerticalOptions="Center" />
+      <Button Text="Press me" Clicked="Button_OnClicked" />
+    </VerticalStackLayout>
   </Grid>
 
 </ContentPage>
